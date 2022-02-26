@@ -10,7 +10,6 @@ const filterArray = array.filter(function (number, number2) {
 
 console.log("The filterArray is: " + filterArray);
 
-
 // Set関数を用いての解答
 const arrays = [2, 4, 7, 5, 4, 3, 8];
 
@@ -41,3 +40,26 @@ function isLeapYear(year) {
 
 console.log(isLeapYear(2020));
 console.log(isLeapYear(2021));
+
+// 関数で記述すると
+// うるう年の定義を記述して、その後、年をif文で判定する
+function isLeapYear(year) {
+  if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+    return true;
+  }
+  return false;
+}
+
+let checkYear = 2020;
+if (isLeapYear(checkYear)) {
+  console.log(checkYear + '年はうるう年です');
+} else {
+  console.log(checkYear + '年はうるう年ではありません');
+}
+
+let checkedYear = 2021;
+if (isLeapYear(checkedYear)) {
+  console.log(checkedYear + '年はうるう年です');
+} else {
+  console.log(checkedYear + '年はうるう年ではありません');
+}
